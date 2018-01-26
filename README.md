@@ -51,7 +51,7 @@ javac *.java
 
 ## Data Files
 
-By default, TweetCollector collects 10,000 tweets in memory before writing them to file. This is done to prevent TweetCollector from constantly accessing the harddisk. If the application is closed via the console (pressing the Enter key three times), then the tweets currently in memory are dumped to file before closing. If an exception is thrown, tweets will be dumped to file.
+By default, TweetCollector collects 10,000 tweets in memory before writing them to file. This is done to prevent TweetCollector from constantly accessing the harddisk. If the application is closed via the console (pressing the Enter key three times), then the tweets currently in memory are dumped to file before closing. If an exception is thrown (e.g. disconnected from the internet), tweets will be dumped to file. In most cases, TweetCollector will attempt to continue operating after an exception, but not all possible cases have been tested.
 
 Each file contains up to 10,000 lines, each representing a single tweet as a JSON object. Note: The entire file is NOT a JSON object nor is it a JSON array.
 
